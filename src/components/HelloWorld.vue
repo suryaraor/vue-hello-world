@@ -21,7 +21,6 @@ export default {
   },
   mounted () {
     axios.defaults.baseURL = 'http://129.213.117.177/:8081';
-    axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
     axios
       .get('/name')
       .then(response => (this.info = response.data))
